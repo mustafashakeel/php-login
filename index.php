@@ -1,18 +1,24 @@
-<?php 
+<?php
 session_start();
 
-	include("connect.php");
-	include("functions.php");
+include("connect.php");
+include("functions.php");
 
-	$user_data = check_login($con);
+$user_data = check_login($con);
+
+
+echo var_dump(subjects);
+echo subjects[1];
 
 ?>
 
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>My website</title>
 </head>
+
 <body>
 
 	<a href="logout.php">Logout</a>
@@ -21,4 +27,5 @@ session_start();
 	<br>
 	Hello, <?php echo $user_data['user_name']; ?>
 </body>
+
 </html>
